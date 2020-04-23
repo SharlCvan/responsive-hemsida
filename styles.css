@@ -302,25 +302,392 @@ a:hover {
     color: #d79922;
 }
 
+/*------Products page------*/
+
 .background-image-products {
     background-image: url(assets/air-atmosphere-beautiful-blue-531767.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .product-intro{
     margin: 0;
     height: 100%;
     background-color: rgba(64, 86, 161, 0.1);
-    background-position: center;
+    background-position: center;   
+    min-height: 800px; 
 }
+
+.intro-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr repeat(5, 1fr);
+}
+
+
+.products-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-logo {
+    font-size: 0.8em;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: rgba(238, 226, 220, 0.6);
+    text-align: center;
+    line-height: 130px;
+    z-index: 3;
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-logo a {
+    text-decoration: none;
+    color: black;
+}
+
+.small-logo:hover {
+    line-height: 130px;
+    border-style: solid;
+    border-color: black;
+    transition: 500ms;
+    background-color: rgba(215, 153, 34, 0.8);
+    cursor: pointer;
+}
+
+.intro-text {
+    grid-column: 2/4;
+    grid-row: 1;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:650px) {
+    .intro-text {
+        font-size: 1.2em;
+    }
+}
+
+.product-sumary {
+    grid-row: 2;
+    grid-column: 2/4;
+}
+
+.product-sumary > p {
+    padding: 20px;
+    background-color: rgba(238, 226, 220, 0.4);
+    border-radius: 10px;
+}
+
+.product-description-personal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 4em;
+}
+
+.product-description-duo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    grid-row: 3;
+    font-size: 4em;
+}
+
+.product-description-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 4;
+    font-size: 4em;
+}
+
+.product-description-scholar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    grid-row: 4;
+    font-size: 4em;
+}
+
+.product-description-bussiness {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 5;
+    font-size: 4em;
+}
+
+.product-description-enterprise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    grid-row: 5;
+    font-size: 4em;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.duo-info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    grid-row: 3;
+    grid-column: 4;
+}
+
+.home-info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    grid-row: 4;
+    grid-column: 2;
+}
+
+.scholar-info {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    grid-row: 4;
+    grid-column: 4;
+}
+
+.bussiness-info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    grid-row: 5;
+    grid-column: 2;
+}
+
+.enterprise-info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    grid-row: 5;
+    grid-column: 4;
+}
+
+.product-description-personal:hover ~ .personal-info {
+    background-color: rgba(238, 226, 220, 0.4);
+    border-radius: 10px;
+}
+
+.product-description-duo:hover ~ .duo-info {
+    background-color: rgba(238, 226, 220, 0.4);
+    border-radius: 10px;
+}
+
+.product-description-home:hover ~ .home-info {
+    background-color: rgba(238, 226, 220, 0.4);
+    border-radius: 10px;
+}
+.product-description-scholar:hover ~ .scholar-info {
+    background-color: rgba(238, 226, 220, 0.4);
+    border-radius: 10px;
+}
+.product-description-bussiness:hover ~ .bussiness-info {
+    background-color: rgba(238, 226, 220, 0.4);
+    border-radius: 10px;
+}
+.product-description-enterprise:hover ~ .enterprise-info {
+    background-color: rgba(238, 226, 220, 0.4);
+    border-radius: 10px;
+}
+
+@media (max-width:800px) {
+
+.intro-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr repeat(7, 1fr);
+        border-style: dashed;
+}
+
+.product-sumary {
+    grid-row: 2;
+    grid-column: 1/4;
+}
+    
+.product-description-personal {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 2em;
+}
+
+.product-description-duo {
+    grid-column: 1;
+    grid-row: 4;
+    font-size: 2em;
+}
+
+.product-description-home {
+    grid-column: 1;
+    grid-row: 5;
+    font-size: 2em;
+}
+
+.product-description-scholar {
+    grid-column: 1;
+    grid-row: 6;
+    font-size: 2em;
+}
+
+.product-description-bussiness {
+    grid-column: 1;
+    grid-row: 7;
+    font-size: 2em;
+}
+
+.product-description-enterprise {
+    grid-column: 1;
+    grid-row: 8;
+    font-size: 2em;
+}
+
+.personal-info {
+    grid-row: 3;
+    grid-column: 2/4;
+}
+
+.duo-info {
+    grid-row: 4;
+    grid-column: 2/4;
+}
+
+.home-info {
+    grid-row: 5;
+    grid-column: 2/4;
+}
+
+.scholar-info {
+    grid-row: 6;
+    grid-column: 2/4;
+}
+
+.bussiness-info {
+    grid-row: 7;
+    grid-column: 2/4;
+}
+
+.enterprise-info {
+    grid-row: 8;
+    grid-column: 2/4;
+}
+}
+
+
+@media (pointer:coarse) {
+
+    .intro-grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 2fr repeat(7, 1fr);
+            border-style: dashed;
+    }
+    
+    .product-sumary {
+        grid-row: 2;
+        grid-column: 1/4;
+    }
+        
+    .product-description-personal {
+        grid-column: 1;
+        grid-row: 3;
+        font-size: 4em;
+    }
+    
+    .product-description-duo {
+        grid-column: 1;
+        grid-row: 4;
+        font-size: 4em;
+    }
+    
+    .product-description-home {
+        grid-column: 1;
+        grid-row: 5;
+        font-size: 4em;
+    }
+    
+    .product-description-scholar {
+        grid-column: 1;
+        grid-row: 6;
+        font-size: 4em;
+    }
+    
+    .product-description-bussiness {
+        grid-column: 1;
+        grid-row: 7;
+        font-size: 4em;
+    }
+    
+    .product-description-enterprise {
+        grid-column: 1;
+        grid-row: 8;
+        font-size: 4em;
+    }
+    
+    .personal-info {
+        grid-row: 3;
+        grid-column: 2/4;
+    }
+    
+    .duo-info {
+        grid-row: 4;
+        grid-column: 2/4;
+    }
+    
+    .home-info {
+        grid-row: 5;
+        grid-column: 2/4;
+    }
+    
+    .scholar-info {
+        grid-row: 6;
+        grid-column: 2/4;
+    }
+    
+    .bussiness-info {
+        grid-row: 7;
+        grid-column: 2/4;
+    }
+    
+    .enterprise-info {
+        grid-row: 8;
+        grid-column: 2/4;
+    }
+    }
+
+
+/*Product selection section*/
 
 .products {
     margin: 0;
     height: 100%;
-    background-color: rgba(215, 153, 34, 0.4);
+    background-color: rgba(101, 157, 189, 0.5);
     background-position: center;
     display: flex;
     justify-content: center;
@@ -346,20 +713,25 @@ a:hover {
 
 .product-logo {
     width: 100%;
-    height: 100%;    
+    height: 100%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .purchase-icon {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     border-radius: 10px;
     background-color: rgba(93, 92, 97, 1);
 }
 
 .purchase-icon > i {
-    margin-top: 10%;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .purchase-icon:hover {
@@ -371,8 +743,7 @@ a:hover {
 }
 
 .product-logo > i {
-    margin-top: 20%;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 .products-grid > div:hover {
@@ -388,7 +759,6 @@ a:hover {
         grid-template-rows: repeat(3, 1fr);
     }
     .purchase-icon > i {
-        margin-bottom: 10%;
         font-size: 1.4rem;
     }
 }
@@ -408,12 +778,10 @@ a:hover {
     }
 
     .product-logo > i {
-        padding-top: 10px;
         font-size: 5rem;
     }
 
     .purchase-icon > i {
-        padding-top: 20%;
         font-size: 3rem;
     }
 }
