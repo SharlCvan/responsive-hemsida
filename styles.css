@@ -1,0 +1,424 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: "josefin slab";
+}
+
+.background-image {
+    margin: 0;
+    height: 100%;
+    background-image: url(assets/white-concrete-building-1029615.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.background-image2 {
+    margin: 0;
+    height: 100%;
+    background-image: url("assets/products.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-house {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    background-color: rgba(197, 198, 199, 0.1);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(197, 198, 199, 0.8);
+}
+
+.header-grid {
+    position: absolute;
+    margin-top: 1rem;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 200px) 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.logo {
+    border-radius: 50%;
+    background-color: rgba(238, 226, 220, 0.6);
+    grid-column: 2;
+    grid-row:1;
+    text-align: center;
+    padding-top: 3.5rem;
+    z-index: 3;
+    transition: 500ms;
+}
+
+.logo:hover {
+    border-style: solid;
+    border-color: black;
+    transition: 500ms;
+    font-size: 1.1em;
+    background-color: rgba(215, 153, 34, 0.8);
+}
+
+.slogan {
+    grid-column: 1/4;
+    grid-row: 2;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+@media (pointer: coarse) {
+    .header-grid {
+        height: 800px;
+        grid-template-columns: 1fr minmax(400px, 400px) 1fr;
+    }
+
+    .logo{
+        padding-top: 7rem;
+        font-size: 2em;
+    }
+
+    .slogan {
+        font-size: 2em;
+    }
+}
+
+.landing-grid {
+    position: absolute;
+    display: grid;
+    width: 60%;
+    height: 60%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    font-size: 9rem;
+    column-gap: 10px;
+    row-gap: 20px;
+    text-align: center;
+}
+
+.company-brag {
+    grid-row: 1;
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.2em;
+}
+
+@media (max-width:800px) {
+    .company-brag {
+        font-size: 20px;
+    }
+}
+
+.products-button {
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-button > div {
+    position: absolute;
+    bottom: 1rem;
+    width: 200px;
+    height: 60px;
+    font-size: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.products-button:hover > div {
+    display: block;
+}
+
+.about-us-button {
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-button > div {
+    position: absolute;
+    bottom: 1rem;
+    width: 200px;
+    height: 60px;
+    font-size: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.about-us-button:hover > div {
+    display: block;
+}
+
+
+@media (min-width:701px) {
+    .products-button > div {
+        font-size: 35px;
+    }
+
+    .about-us-button > div {
+        font-size: 35px;
+    }
+}
+
+@media (max-width:700px) {
+    
+    .company-brag {
+        grid-column: 1;
+    }
+
+    .about-us-button {
+        grid-row: 3;
+    }
+
+    .landing-grid {
+        grid-template-columns: 1fr;
+        height: 80%;
+        row-gap: 20px;
+    }
+
+    .products-button > div {
+        top: 55%;
+        padding-left: 10%;
+    }
+
+    .about-us-button > div {
+        bottom: 0;
+        height: 50px;
+    }
+}
+
+@media (pointer: coarse) {
+    .landing-grid {
+        grid-template-columns: 1fr;
+        height: 60%;
+        row-gap: 10px;
+        font-size: 13em;
+    }
+
+    .company-brag {
+        grid-column: 1;
+    }
+
+    .about-us-button {
+        grid-row: 3;
+    }
+
+    .products-button > div {
+        display: block;
+        height: 50px;
+        top: 58%;
+        padding-left: 5%;
+    }
+
+    .about-us-button > div {
+        display: block;
+        bottom: 0;
+        height: 50px;
+    }
+}
+
+a {
+    color: rgba(215, 153, 34, 0.8);
+    transition: 250ms;
+}
+
+a:hover {
+    color: #5ab9ea;
+    transition: 250ms;
+    font-size: 1.2em;
+}
+
+@media (pointer:coarse) {
+    a {
+        color: #5ab9ea;
+    }
+}
+
+.landing-footer {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(197, 198, 199, 0.7);
+}
+
+.trademark {
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.socials {
+    text-align: right;
+}
+
+.socials-button {
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 20%;
+    box-shadow: 0 5px 15px -5px black;
+    color: #5ab9ea;
+    position: relative;
+    overflow: hidden;
+}
+
+.socials-button i{
+    line-height: 40px;
+    font-size: 1.3em;
+}
+
+.socials-button:hover {
+    color: #d79922;
+}
+
+.background-image-products {
+    background-image: url(assets/air-atmosphere-beautiful-blue-531767.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.product-intro{
+    margin: 0;
+    height: 100%;
+    background-color: rgba(64, 86, 161, 0.1);
+    background-position: center;
+}
+
+.products {
+    margin: 0;
+    height: 100%;
+    background-color: rgba(215, 153, 34, 0.4);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-grid {
+    width: 70%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.products-grid > div {
+    background-color: rgba(93, 92, 97, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.product-logo {
+    width: 100%;
+    height: 100%;    
+}
+
+.purchase-icon {
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-radius: 10px;
+    background-color: rgba(93, 92, 97, 1);
+}
+
+.purchase-icon > i {
+    margin-top: 10%;
+    font-size: 2rem;
+}
+
+.purchase-icon:hover {
+    background-color: white;
+}
+
+.purchase-icon:hover > i {
+    color: black;
+}
+
+.product-logo > i {
+    margin-top: 20%;
+    font-size: 3rem;
+}
+
+.products-grid > div:hover {
+    cursor: pointer;
+    background-color: rgba(93, 92, 97, 1);
+    box-shadow: 0 5px 15px -5px black;
+}
+
+@media (max-width:800px) {
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .purchase-icon > i {
+        margin-bottom: 10%;
+        font-size: 1.4rem;
+    }
+}
+
+@media (pointer:coarse) {
+    .products-grid {
+        display: grid;
+        width: 50%;
+        height: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .products-grid > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-logo > i {
+        padding-top: 10px;
+        font-size: 5rem;
+    }
+
+    .purchase-icon > i {
+        padding-top: 20%;
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
