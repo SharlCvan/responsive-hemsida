@@ -358,7 +358,7 @@ a:hover {
     align-items: center;
 }
 
-@media (max-width:650px) {
+@media (max-width:650px) , screen and (max-height: 800px) {
     .intro-text {
         font-size: 1.2em;
     }
@@ -477,30 +477,35 @@ a:hover {
     grid-column: 4;
 }
 
+.intro-grid > div > p {
+    padding: 10px;
+    font-size: 1.5em;
+}
+
 .product-description-personal:hover ~ .personal-info {
-    background-color: rgba(238, 226, 220, 0.4);
+    background-color: rgba(238, 226, 220, 0.6);
     border-radius: 10px;
 }
 
 .product-description-duo:hover ~ .duo-info {
-    background-color: rgba(238, 226, 220, 0.4);
+    background-color: rgba(238, 226, 220, 0.6);
     border-radius: 10px;
 }
 
 .product-description-home:hover ~ .home-info {
-    background-color: rgba(238, 226, 220, 0.4);
+    background-color: rgba(238, 226, 220, 0.6);
     border-radius: 10px;
 }
 .product-description-scholar:hover ~ .scholar-info {
-    background-color: rgba(238, 226, 220, 0.4);
+    background-color: rgba(238, 226, 220, 0.6);
     border-radius: 10px;
 }
 .product-description-bussiness:hover ~ .bussiness-info {
-    background-color: rgba(238, 226, 220, 0.4);
+    background-color: rgba(238, 226, 220, 0.6);
     border-radius: 10px;
 }
 .product-description-enterprise:hover ~ .enterprise-info {
-    background-color: rgba(238, 226, 220, 0.4);
+    background-color: rgba(238, 226, 220, 0.6);
     border-radius: 10px;
 }
 
@@ -509,6 +514,11 @@ a:hover {
 .intro-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 2fr repeat(7, 1fr);
+}
+
+.intro-grid > div > p {
+    padding: 10px;
+    font-size: 1em;
 }
 
 .product-sumary {
@@ -688,7 +698,6 @@ a:hover {
 
 .products-grid > div {
     background-color: rgba(93, 92, 97, 0.8);
-    border-radius: 10px;
     text-align: center;
     display: grid;
     align-items: center;
@@ -709,7 +718,6 @@ a:hover {
     align-items: center;
     justify-content: center;
     color: white;
-    border-radius: 10px;
     background-color: rgba(93, 92, 97, 1);
 }
 
@@ -963,7 +971,7 @@ a:hover {
 .info-video2 > video {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; 
 }
 
 .overlay {
