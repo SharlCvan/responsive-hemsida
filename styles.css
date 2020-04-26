@@ -1007,9 +1007,11 @@ a:hover {
 .info-video:hover .overlay > p {
     display: flex;
     transition: .5s ease;
+    font-size: 1.3em;
 }
 
 .info-video2:hover .overlay > p {
     display: flex;
     transition: .5s ease;
+    font-size: 1.3em;
 } 
