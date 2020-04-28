@@ -37,7 +37,7 @@ html {
     height: 100%;
     background-size: cover;
     position: absolute;
-    background-color: rgba(197, 198, 199, 0.1);
+    background-color: rgba(197, 198, 199, 0);
 }
 
 ::-webkit-scrollbar {
@@ -82,7 +82,7 @@ html {
     grid-column: 1/4;
     grid-row: 2;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 @media (pointer: coarse) {
@@ -216,7 +216,7 @@ a {
 }
 
 a:hover {
-    color: #5ab9ea;
+    color: white;
     transition: 250ms;
     font-size: 1.2em;
 }
@@ -289,7 +289,7 @@ a:hover {
 /*------Products page------*/
 
 .background-image-products {
-    background-image: url(assets/air-atmosphere-beautiful-blue-531767.jpg);
+    background-image: url(assets/gray-house-with-fireplace-surrounded-by-grass-under-white-731082.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -375,6 +375,14 @@ a:hover {
     border-radius: 10px;
 }
 
+.product-intro a:hover {
+    color: white;
+}
+
+.small-logo a:hover {
+    color: black;
+}
+
 .product-description-personal {
     display: flex;
     justify-content: center;
@@ -427,6 +435,10 @@ a:hover {
     grid-column: 3;
     grid-row: 5;
     font-size: 4em;
+}
+
+.product-intro p {
+    color: white;
 }
 
 .personal-info {
@@ -483,29 +495,29 @@ a:hover {
 }
 
 .product-description-personal:hover ~ .personal-info {
-    background-color: rgba(238, 226, 220, 0.6);
+    background-color: rgba(0,0,0, 0.6);
     border-radius: 10px;
 }
 
 .product-description-duo:hover ~ .duo-info {
-    background-color: rgba(238, 226, 220, 0.6);
+    background-color: rgba(0,0,0, 0.6);
     border-radius: 10px;
 }
 
 .product-description-home:hover ~ .home-info {
-    background-color: rgba(238, 226, 220, 0.6);
+    background-color: rgba(0,0,0, 0.6);
     border-radius: 10px;
 }
 .product-description-scholar:hover ~ .scholar-info {
-    background-color: rgba(238, 226, 220, 0.6);
+    background-color: rgba(0,0,0, 0.6);
     border-radius: 10px;
 }
 .product-description-bussiness:hover ~ .bussiness-info {
-    background-color: rgba(238, 226, 220, 0.6);
+    background-color: rgba(0,0,0, 0.6);
     border-radius: 10px;
 }
 .product-description-enterprise:hover ~ .enterprise-info {
-    background-color: rgba(238, 226, 220, 0.6);
+    background-color: rgba(0,0,0, 0.6);
     border-radius: 10px;
 }
 
@@ -679,7 +691,7 @@ a:hover {
 .products {
     margin: 0;
     height: 100%;
-    background-color: rgba(101, 157, 189, 0.5);
+    background-color: rgba(0,0,0, 0.4);
     background-position: center;
     display: flex;
     justify-content: center;
@@ -786,7 +798,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -841,6 +853,7 @@ a:hover {
     text-align: center;
     color: white;
     max-width: 200px;
+    font-size: 1.2em;
 }
 
 .about-us-background-image2 {
