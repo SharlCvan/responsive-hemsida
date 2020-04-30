@@ -11,7 +11,7 @@ html {
 .background-image {
     margin: 0;
     height: 100%;
-    background-image: url(assets/white-concrete-building-1029615.jpg);
+    background-image: url(assets/man-sitting-on-green-chair-while-using-laptop-374831.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -37,8 +37,11 @@ html {
     height: 100%;
     background-size: cover;
     position: absolute;
-    background-color: rgba(197, 198, 199, 0);
+    background-color: rgba(197, 198, 199, 0.2);
+    min-height: 500px;
 }
+
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -77,6 +80,31 @@ html {
     font-size: 1.1em;
     background-color: rgba(215, 153, 34, 0.8);
 }
+
+.logo > a {
+    text-decoration: none;
+    color: black;
+    transition: 0ms;
+}
+
+.logo > a:hover {
+    color: black;
+    transition: 0ms;
+    font-size: 1em;
+}
+
+/*
+a {
+    color: rgba(215, 153, 34, 0.8);
+    transition: 250ms;
+}
+
+a:hover {
+    color: white;
+    transition: 250ms;
+    font-size: 1.2em;
+}
+*/
 
 .slogan {
     grid-column: 1/4;
@@ -122,6 +150,14 @@ html {
     justify-content: center;
     align-items: center;
     font-size: 0.2em;
+}
+
+.company-brag:hover > p {
+    background-color: rgba(215, 153, 34, 1);
+    border-radius: 20px;
+    padding: 5px;
+    color: white;
+    transition: 250ms;
 }
 
 @media (max-width:800px) {
@@ -227,7 +263,7 @@ a:hover {
     bottom: 0;
     height: 50px;
     width: 100%;
-    background-color: rgba(197, 198, 199, 0.7);
+    background-color: rgba(238, 226, 220, 0.8);
 }
 
 .trademark {
@@ -898,10 +934,17 @@ a:hover {
 }
 
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1200px) {
     
     .info-text {
         font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width:700px) {
+    
+    .info-text {
+        font-size: 0.9em;
     }
 }
 
