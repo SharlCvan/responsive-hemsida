@@ -11,7 +11,7 @@ html {
 .background-image {
     margin: 0;
     height: 100%;
-    background-image: url(assets/man-sitting-on-green-chair-while-using-laptop-374831.jpg);
+    background-image: url("assets/man-sitting-on-green-chair-while-using-laptop-374831.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
